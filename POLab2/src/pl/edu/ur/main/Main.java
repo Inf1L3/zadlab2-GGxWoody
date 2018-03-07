@@ -3,20 +3,26 @@ package pl.edu.ur.main;
 import java.util.Scanner;
 
 /**
- *
  * @author marcin
  */
 public class Main {
-
     /**
      * @param args the command line arguments
      */
+    public static Scanner input = new Scanner(System.in);
+
     public static void main(String[] args) {
 
-        Scanner input = new Scanner(System.in);
-        int wybor = 1;
-        while (wybor != 0) {
-            wybor = input.nextInt();
+
+    }
+    // TODO zad 3, 4, 6, 7
+
+
+
+    public static void zadanieLaborki1() {
+        int wybor = input.nextInt();
+        do {
+
             switch (wybor) {
                 case 1:
                     System.out.println("Styczen");
@@ -58,7 +64,10 @@ public class Main {
                     System.out.println("Bledny numer");
                     break;
             }
-        }
+        } while (wybor != 0);
+    }
+
+    public static void zadanieLaborki2() {
         int liczba1 = 10, liczba3 = 0, i = 0;
 
         while (liczba3 < 1000) {
@@ -73,22 +82,25 @@ public class Main {
             i++;
         } while (liczba3 < 1000);
         System.out.println(i);
+    }
 
-        for (int j = 0; j <= 20; j++) {
-            if (j == 2 || j == 6 || j == 9 || j == 15 || j == 19) {
-                continue;
-            }
-            System.out.println(j);
-        }
-        // TODO zad 3, 4, 6, 7
+    public static void zadanie1() {
         int a, b, c;
         a = input.nextInt();
         b = input.nextInt();
         c = input.nextInt();
         double delta;
-        delta = b*b - 4*a*c;
-        double x1 =((-b - Math.pow(delta, 1/2))/2*a);
-        double x2 =((-b + Math.pow(delta, 1/2))/2*a);
-        
+        delta = b * b - 4 * a * c;
+        double x1 = ((-b - Math.pow(delta, 1 / 2)) / 2 * a);
+        double x2 = ((-b + Math.pow(delta, 1 / 2)) / 2 * a);
+        System.out.println(x1);
+        System.out.println(x2);
+    }
+
+    public static void zadanie4() {
+        for (int j = 0; j <= 20; j++) {
+            if (j == 2 || j == 6 || j == 9 || j == 15 || j == 19) continue;
+            System.out.println(j);
+        }
     }
 }
