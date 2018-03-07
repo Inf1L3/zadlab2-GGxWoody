@@ -59,29 +59,36 @@ public class Main {
                     break;
             }
         }
-        int liczba1 = 10, liczba3 =0,i=0;
+        int liczba1 = 10, liczba3 = 0, i = 0;
 
-        while(liczba3 < 1000)
-        {
+        while (liczba3 < 1000) {
             liczba3 += liczba1;
             i++;
         }
         System.out.println(i);
-        liczba3 =0;
-        i=0;
-        do{
+        liczba3 = 0;
+        i = 0;
+        do {
             liczba3 += liczba1;
             i++;
-        }while(liczba3 < 1000);        
+        } while (liczba3 < 1000);
         System.out.println(i);
-        
+
         for (int j = 0; j <= 20; j++) {
-            if(j==2 || j==6 || j==9 || j==15 || j==19){
+            if (j == 2 || j == 6 || j == 9 || j == 15 || j == 19) {
                 continue;
-        }
+            }
             System.out.println(j);
-        }  
+        }
         // TODO zad 3, 4, 6, 7
-    
+        int a, b, c;
+        a = input.nextInt();
+        b = input.nextInt();
+        c = input.nextInt();
+        double delta;
+        delta = b*b - 4*a*c;
+        double x1 =((-b - Math.pow(delta, 1/2))/2*a);
+        double x2 =((-b + Math.pow(delta, 1/2))/2*a);
+        
     }
 }
